@@ -1,25 +1,35 @@
 #1723682
 #David van Vliet
 
+def toon_aantal_kluizen_vrij():
+    bestand = open('kluizen.txt', 'r')
+    inhoud = bestand.readlines()
+    bestand.close()
+
+    beschikbaar = 12 - len(inhoud)
+    return beschikbaar
+
+def nieuwe_kluis():
+    kluisnummers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+
 def menu():
     print('1: Ik wil weten hoeveel kluizen nog vrij zijn \n 2: Ik wil een nieuwe kluis \n 3: Ik wil even iets uit mijn kluis halen')
-    keuze = input()
+    keuze = eval(input("Uw keuze: "))
 
     if keuze == '1':
-        print('er zijn 12 kluizen over')
-        menu()
+        vrij = toon_aantal_kluizen_vrij()
+        print("Er zijn ", vrij, "kluizen vrij")
 
-    if keuze == '2':
+    elif keuze == '2':
         print('Uw nieuwe kluisnummer is: 1')
-        menu()
 
-    if keuze == '3':
+    elif keuze == '3':
         print('Kluisnummer: ')
         input()
         print('Wachtwoord: ')
         input()
-        menu()
-
-print(menu())
-
+    else :
+        print('Verkeerde invoer')
+menu()
 
