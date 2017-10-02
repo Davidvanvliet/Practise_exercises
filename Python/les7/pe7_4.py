@@ -1,14 +1,22 @@
 #1723682
 #David van Vliet
 
+def tickers():
+    with open ('tickerfile.txt','r') as document1:
+        tickers = {}
+        for line in document1:
+            line = line.strip()
+            if not line:
+                continue
+            key, value = line.split(':')
+            tickers[key] = value
+    return tickers
 
-with open ('tickerfile.txt','r') as document1:
-    tickers = {}
-    for line in document1:
-        line = line.strip()
-        if not line:
-            continue
-        key, value = line.split(':')
-        tickers[key] = value
+tickers = tickers()
+naam = input('Enter company name: ')
+print(tickers[naam])
 
-print(tickers)
+symbool = input('Enter ticker symbool: ')
+for woord, ticker in tickers.items():
+    if ticker == symbool:
+        print(woord)
