@@ -35,7 +35,7 @@ def omroepen_reis(stations, beginstation, eindstation):
     prijs = afstand * 5
     print("De prijs van het kaartje is ", prijs, "euro")
     print("Jij stapt in de trein in ", beginstation)
-    print(stations[positie3:positie2 -1])
+    print(*stations[positie3:positie2 -1], sep='\n - ')
     print("Jij stapt uit in ", eindstation)
 
 print(omroepen_reis(stations, beginstation, eindstation))
