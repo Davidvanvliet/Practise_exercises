@@ -1,7 +1,7 @@
 #1723682
 #David van Vliet
 
-stations = ['', 'schagen', 'heerhugowaard', 'alkmaar', 'castricum', 'zaandam', 'amsterdam sloterdijk', 'amsterdam centraal', 'amsterdam amstel', 'utrecht centraal', '’s-hertogenbosch', 'eindhoven', 'weert', 'roermond', 'sittard', 'maastricht']
+stations = ['schagen', 'heerhugowaard', 'alkmaar', 'castricum', 'zaandam', 'amsterdam sloterdijk', 'amsterdam centraal', 'amsterdam amstel', 'utrecht centraal', '’s-hertogenbosch', 'eindhoven', 'weert', 'roermond', 'sittard', 'maastricht']
 
 def inlezen_beginstation(stations):
     beginstation = input("Wat is je begin station?")
@@ -25,8 +25,8 @@ def inlezen_eindstation(stations, beginstation):
 eindstation = inlezen_eindstation(stations, beginstation)
 
 def omroepen_reis(stations, beginstation, eindstation):
-    positie1 = stations.index(beginstation)
-    positie2 = stations.index(eindstation)
+    positie1 = stations.index(beginstation) +1
+    positie2 = stations.index(eindstation) +1
     positie3 = stations.index(beginstation) +1
     print("Het beginstation ", beginstation, "is het ", positie1, "e station in het traject")
     print("Het eindstation ", eindstation, "is het ", positie2, "e station in het traject")
@@ -35,9 +35,8 @@ def omroepen_reis(stations, beginstation, eindstation):
     prijs = afstand * 5
     print("De prijs van het kaartje is ", prijs, "euro")
     print("Jij stapt in de trein in ", beginstation)
-    print(stations[positie3:positie2])
+    print(stations[positie3:positie2 -1])
     print("Jij stapt uit in ", eindstation)
-    # return resultaat, resultaat2, afstandstations
 
 print(inlezen_beginstation(stations))
 print(inlezen_eindstation(stations, beginstation))
