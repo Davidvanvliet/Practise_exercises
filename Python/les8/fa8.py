@@ -38,6 +38,4 @@ def omroepen_reis(stations, beginstation, eindstation):
     print(stations[positie3:positie2 -1])
     print("Jij stapt uit in ", eindstation)
 
-print(inlezen_beginstation(stations))
-print(inlezen_eindstation(stations, beginstation))
 print(omroepen_reis(stations, beginstation, eindstation))
