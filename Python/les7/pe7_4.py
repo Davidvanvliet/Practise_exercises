@@ -14,9 +14,9 @@ def tickers():
 
 tickers = tickers()
 naam = input('Enter company name: ')
-print(tickers[naam])
+print("Ticker symbol: ", (tickers[naam]))
 
 symbool = input('Enter ticker symbool: ')
 for woord, ticker in tickers.items():
     if ticker == symbool:
-        print(woord)
+        print("Company name: ", woord)
