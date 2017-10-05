@@ -13,14 +13,15 @@ def inlezen_beginstation(stations):     #input krijgen voor het beginstation. Al
 beginstation = inlezen_beginstation(stations)
 
 def inlezen_eindstation(stations, beginstation):    #input krijgen voor het eindstation. Als het een foute invoer heeft, opnieuw vragen.
-    eindstation = input("Wat is je eind station?")
-    while eindstation not in stations:
-       print("wrong station")
-       eindstation = input("Wat is je eind station?")
-    while stations.index(eindstation) < stations.index(beginstation):       #Als het eindstation voor het beginstation staat opnieuw vragen
-        print("Uw eindstation staat voor het beginstation. Dit kan niet!")
+    while True:
         eindstation = input("Wat is je eind station?")
-    return eindstation
+        if eindstation in stations:
+            if stations.index(eindstation) < stations.index(beginstation):       #Als het eindstation voor het beginstation staat opnieuw vragen
+                print("Uw eindstation staat voor het beginstation. Dit kan niet!")
+            else:
+                return eindstation
+        else:
+            print("Wrong station")
 
 eindstation = inlezen_eindstation(stations, beginstation)
 
