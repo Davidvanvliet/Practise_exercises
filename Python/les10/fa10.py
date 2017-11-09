@@ -25,7 +25,7 @@ for station in b:
     if station ['Synoniemen'] is not None:
         synoniem = station['Synoniemen']
         code = station['Code']
-        print(synoniem)
+        print(code, '-', synoniem)
 
 print()
 #in het xml bestand navigeren naar de betreffende regels voor de code en het type en deze printen
