@@ -1,14 +1,13 @@
 #1723682
 #David van Vliet
 
-invoerstring = input('')
+def code(invoerstring): #hier worden de normale letters gencrypted zodat
+    encrypted = ""
+    for i in invoerstring:
+        if i == " ":
+            encrypted += "#"
+        else:
+            encrypted += chr(ord(i)+3) #hier word geencrypted en doorgeteld met 3 letters erna
+    return encrypted
 
-def code(invoerstring):
-    invoerstring = [ord(c) for c in invoerstring]
-    invoerstring = ''.join(chr(i) for i in invoerstring)
-    return invoerstring
-print(code(invoerstring))
-
-
-
-# + 3 doet het nog niet
+print(code("RutteAlkmaarDen Helder"))

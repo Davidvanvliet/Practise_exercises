@@ -6,6 +6,7 @@ import csv
 
 bestand = 'inloggers.csv'
 
+#In een csv bestand schrijven met de inputs die je geeft
 with open (bestand, 'w', newline='') as CSVfile:
     schrijven = csv.writer(CSVfile, delimiter = ';')
 

@@ -2,6 +2,8 @@
 #David van Vliet
 
 import random
+
+#Monopoly spel door met random dobbelstenen te gooien
 def monopolyworp():
     def worp_werpen():
         return [random.randrange(1,7),random.randrange(1,7)]

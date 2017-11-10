@@ -1,9 +1,10 @@
 #1723682
 #David van Vliet
 
-aanwezig = {'Vul naam in' : 2, 'Vul naam in' : 1}
-#def namen():
-aanwezig["Vul naam in"] = 1
+#Maakt een dictionary aan en vraagt hiervoor de value op
+aanwezig = {'David' : 2, 'Piet' : 1}
+aanwezig["Piet"] = 1
 print(aanwezig)
 
-print(aanwezig.get('Vul naam in'))
+print(aanwezig.get('David'))
+

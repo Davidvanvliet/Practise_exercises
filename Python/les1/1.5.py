@@ -1,3 +1,6 @@
+#1723682
+#David van Vliet
+
 favorieten = ['queen']
 print(favorieten)
 favorieten.append('eminem')

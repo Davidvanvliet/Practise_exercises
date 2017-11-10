@@ -1,3 +1,6 @@
+#1723682
+#David van Vliet
+
 numlist = [3, 7, -2, 14]
 
 max_val = max(numlist)

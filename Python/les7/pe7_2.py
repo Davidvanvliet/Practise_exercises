@@ -1,6 +1,7 @@
 #1723682
 #David van Vliet
 
+#Checken of de string 4 letters heeft
 str = ()
 inp = input("Geef een string van vier letters: ")
 while len(inp) != 4:

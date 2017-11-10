@@ -1,3 +1,7 @@
+#1723682
+#David van Vliet
+
+#Rekensommen uitrekenen
 def kwadraten_som(grondgetallen) :
     getal2 = 0
     for getal in grondgetallen :

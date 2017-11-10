@@ -1,6 +1,7 @@
 #1723682
 #David van Vliet
 
+#bereken de gemiddelde kosten per persoon
 def kosten (personen):
     try:
         print(4356/personen)

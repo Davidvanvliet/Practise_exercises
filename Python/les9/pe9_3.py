@@ -7,6 +7,7 @@ waarde = 0
 naam = ''
 datum = ''
 
+#De hoogste score uitlezen en de bijbehorende datum en naam hiervan printen
 with open ('lees_bestand.csv', 'r') as LeesBestand:
     lees = csv.reader (LeesBestand, delimiter = ';')
 

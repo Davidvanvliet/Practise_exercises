@@ -1,3 +1,7 @@
+#1723682
+#David van Vliet
+
+#Alle getallen opsommen
 def som(getallenlijst):
     return print(sum(getallenlijst))
 
