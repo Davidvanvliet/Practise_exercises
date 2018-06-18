@@ -16,16 +16,16 @@ def open_bestand(): #Opent het opgegeven bestand
         exit()
 
 def gefaalde_downloads():   #laat alle downloads zien die gefaald zijn
-    gefaald = []
+    gefaald = []            #lijst waar alle gefaalde downloads in komen te staan
     for regel in inhoud:
         fout = re.search("FAIL.+\"", regel)
         if fout is not None:
             gefaald.append(fout.group())
             print("\n".join(gefaald))
 
-def aantal_gefaalde_downloads():
-    lijst = []
-    hoeveel = Counter()
+def aantal_gefaalde_downloads():    #Laat een lijst zien van alle gefaalde downloads met de hoeveelheden per bestand
+    lijst = []              #Maakt een lijst met de gefaalde downloads
+    hoeveel = Counter()     #Hier komen de hoeveelheden te staan voor elke gefaalde download die in de lijst staat
 
     for regel in inhoud:
         if "FAIL DOWNLOAD" in regel:
@@ -36,9 +36,9 @@ def aantal_gefaalde_downloads():
     for waarde, getal in hoeveel.most_common():
         print("Bestand: {} Gefaalde downloads: {}".format(waarde, getal))
 
-def top_tien_downloads():
-    top_tien = []
-    hoeveel = Counter()
+def top_tien_downloads():   #Laat de 10 meest gedownloade bestanden zien met daarachter de hoeveelheid
+    top_tien = []           #Een lijst waar de top 10 gedownloade bestanden worden geplaatst
+    hoeveel = Counter()     #Een counter die telt hoeveel keer een zelfde bestand is gedownload
     for regel in inhoud:
         if "OK DOWNLOAD" in regel:
             split = regel.split()
@@ -49,7 +49,7 @@ def top_tien_downloads():
     for waarde, getal in hoeveel.most_common(10):
         print("bestand: {} Downloads: {}".format(waarde, getal))
 
-def menu():
+def menu():                 #Een menu met alle keuzes
     print('\n---------------------menu---------------------')
     print(' 1: Laat gefaalde downloads zien \n 2: Laat aantal gefaalde downloads per bestand zien \n 3: Laat een top 10 gedownloade bestanden zien \n 5: Afbreken')
     keuze = str(input("Uw keuze: "))
@@ -70,3 +70,4 @@ def menu():
 
 open_bestand()
 menu()
+
